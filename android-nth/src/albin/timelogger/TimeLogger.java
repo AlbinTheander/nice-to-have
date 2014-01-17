@@ -31,6 +31,7 @@ public class TimeLogger {
     }
 
     public void reset() {
+        start = SystemClock.uptimeMillis();
         events.clear();
     }
 
