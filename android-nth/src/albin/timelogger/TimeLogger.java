@@ -30,12 +30,12 @@ public class TimeLogger {
         start = SystemClock.uptimeMillis();
     }
 
-    public void addEvent(String msg) {
-        events.add(new Event(SystemClock.uptimeMillis(), msg));
-    }
-
     public void reset() {
         events.clear();
+    }
+
+    public void addSplit(String msg) {
+        events.add(new Event(SystemClock.uptimeMillis(), msg));
     }
 
     public void dumpToLog() {
